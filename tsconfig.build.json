@@ -1,0 +1,24 @@
+{
+  "extends"        : "./tsconfig.json",
+  "exclude"        : [
+    "**/*.test.ts",
+    "node_modules",
+    "build",
+    "coverage",
+    "*.config.js"
+  ],
+  "compilerOptions": {
+    "noEmit"                          : false,
+    "composite"                       : false,
+
+    "downlevelIteration"              : false,
+
+    "strict"                          : true,
+    "esModuleInterop"                 : true,
+    "skipLibCheck"                    : true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ES6","DOM"
+    ]
+  }
+}
