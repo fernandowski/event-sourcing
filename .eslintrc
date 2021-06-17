@@ -1,0 +1,33 @@
+{
+  "root"         : true,
+  "parser"       : "@typescript-eslint/parser",
+  "env"          : {
+    "browser": false,
+    "es6"    : true,
+    "node"   : true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType" : "module"
+  },
+  "plugins"      : [
+    "@typescript-eslint",
+    "sonarjs"
+  ],
+  "extends"      : [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "rules"        : {
+    "complexity"                  : [
+      "error",
+      3
+    ],
+    "sonarjs/cognitive-complexity": [
+      "error",
+      2
+    ]
+  }
+}

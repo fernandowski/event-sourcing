@@ -1,0 +1,37 @@
+{
+  "name": "leaderboard-event-ingestion",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "tsc -p tsconfig.build.json && node build/src/index.js",
+    "which": "which tsc",
+    "tsc": "tsc",
+    "huh": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/fernandouski/leaderboard-event-ingestion.git"
+  },
+  "keywords": [
+    "event",
+    "sourcing"
+  ],
+  "author": "Fernando Lopez",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fernandouski/leaderboard-event-ingestion#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "luxon": "^1.27.0",
+    "uuidv4": "^6.2.10"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-plugin-sonarjs": "^0.8.0-125",
+    "typescript": "4.3.2"
+  }
+}
