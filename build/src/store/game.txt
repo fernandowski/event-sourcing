@@ -1,0 +1,2 @@
+{"type":"GAME_STARTED","id":"a19d1e8d-71b2-4ee6-8552-2ec6401df751","eventTime":"2021-07-31T13:18:17.509-07:00","data":{"gameType":"FREE_FOR_ALL","maxPlayers":2,"gameId":"0ee4f667-209d-4df3-a31b-3bf0cec27008"}}
+{"type":"GAME_ENDED","id":"8d6f1b6e-3936-4c5b-9b1e-d25d5515889c","eventTime":"2021-07-31T16:12:59.424-07:00","data":{"gameId":"0ee4f667-209d-4df3-a31b-3bf0cec27008"}}

@@ -1,8 +1,7 @@
-import {curry} from 'lodash/fp'
 import {IValidator} from "../../../lib/IValidator";
-import {GameStartedEvent, GAME_STARTED} from '../event/event'
+import {GameStartedEvent, GAME_STARTED, GAME_TYPE} from '../event/event'
 
-const validateGameType = ({type}: GameStartedEvent) => (type === GAME_STARTED ? null : 'Not a valid game Type');
+const validateGameType = ({data: { gameType }}: GameStartedEvent) => (gameType === GAME_TYPE ? null : 'Not a valid game Type');
 const validateNumberOfPlayers = ({data: {maxPlayers}}: GameStartedEvent) => (maxPlayers < 4 ? null : 'Game is Full');
 
 const playerValidator: IValidator = {

@@ -25,6 +25,7 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "luxon": "^1.27.0",
+    "streamfp": "^0.2.2",
     "uuidv4": "^6.2.10"
   },
   "devDependencies": {

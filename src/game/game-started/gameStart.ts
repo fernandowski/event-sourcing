@@ -1,15 +1,25 @@
-import { cond } from "lodash/fp"
-import {validators} from "./event/validator";
-import {eventValidate}  from "./../../lib/event-validate"
-import {writeToStore} from "./../../store/write-to-store";
+import {pipe, curry, cond, stubTrue} from "lodash/fp"
+import {writeToGameStore} from "../../store/game";
+import {getEvent} from "./event/event";
+import {validateGameStarted} from "./validation";
 
+export const storeEvent = curry(
+    (store, event, errors) => {
+        return cond(
+            [
+                [(errors) => (errors.length > 0), () => ({ status: 'NOT_VALID', errors})],
+                [stubTrue, () => (store(event))]
+            ]
+        )(errors);
+    }
+);
 
-
-const startGame = (event) => {
-    writeToStore('game', {ka: 'ka'})
-    writeToStore('game', {ka: 'ka'})
-    writeToStore('game', {ka: 'ka'})
-    writeToStore('game', {ka: 'ka'})
+export const startGame = ({maxPlayers, gameType}) => {
+    const gameStartedEvent = getEvent(gameType, maxPlayers);
+    return pipe(
+        validateGameStarted,
+        storeEvent(writeToGameStore, gameStartedEvent),
+    )(gameStartedEvent)
 }
 
-startGame({});
+console.log(startGame({maxPlayers: 2, gameType: 'FREE_FOR_ALL'}));

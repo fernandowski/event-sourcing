@@ -1,5 +1,5 @@
-import { eventValidate } from '../../../lib/event-validate';
-import { writeToStore, } from "../../../store/write-to-store";
+import { validate } from '../../../lib/event-validate';
+import { writeToStore, } from "../../../store/store-lib";
 
 const getHistory = (eventId) => {
     // todo not doing anything
