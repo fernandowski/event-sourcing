@@ -1,4 +1,4 @@
-import {orderBy, reduce, curry} from "lodash/fp";
+import {cond, curry, orderBy, reduce, stubTrue} from "lodash/fp";
 import {DateTime} from 'luxon';
 
 export const sortEvents = (events) => {
@@ -12,7 +12,18 @@ export const sortEvents = (events) => {
 export const buildState = curry((buildMap, events: any[]) => {
     return reduce((result, value) => {
         const {type = null} = value;
-        const state = buildMap[type] ? buildMap[type](value) : {};
+        const state = buildMap[type] ? buildMap[type](value, result) : {};
         return {...result, ...state};
-    }, {}, events)
+    }, {}, events);
 });
+
+export const storeEvent = curry(
+    (store, event, errors) => {
+        return cond(
+            [
+                [(errors) => (errors.length > 0), () => ({status: 'NOT_VALID', errors})],
+                [stubTrue, () => (store(event))]
+            ]
+        )(errors);
+    }
+);

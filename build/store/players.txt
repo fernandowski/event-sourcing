@@ -1,0 +1,1 @@
+{"type":"PLAYER_REGISTERED","id":"a51ce431-4469-4aff-aad1-fc03bdb1fb55","eventTime":"2022-01-13T20:45:49.627-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44","firstName":"fernando","lastName":"lopes","userId":"flopez","win":0,"loss":0,"draw":0}}

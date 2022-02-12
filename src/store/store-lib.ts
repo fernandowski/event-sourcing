@@ -32,9 +32,27 @@ export const crateDataSinkStream = (storeName: string): ReadableStream => {
     }));
 }
 
-export const getEventsByGameId = curry((storeName: string, filterCB: (event: any) => boolean) => {
+export const getEvents = curry((storeName: string, filterCB: (event: any) => boolean) => {
     const stream = compose(
         filter(filterCB),
+        map((data) => (JSON.parse(data))),
+    )(getStore(storeName));
+    return streamAsPromise(stream);
+});
+
+export const filterEventTypeCallback = curry((eventType: string, data: string, ) : boolean => {
+    try {
+        const {type} = JSON.parse(data.replace(/\r?\n/g, ''));
+        return type === eventType;
+    } catch (e){
+        console.log(e.message)
+        return false;
+    }
+});
+
+export const getEventsByEventType = curry((storeName: string, eventType: string) => {
+    const stream = compose(
+        filter(filterEventTypeCallback(eventType)),
         map((data) => (JSON.parse(data))),
     )(getStore(storeName));
     return streamAsPromise(stream);
