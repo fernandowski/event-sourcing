@@ -1,1 +1,10 @@
 {"type":"PLAYER_REGISTERED","id":"a51ce431-4469-4aff-aad1-fc03bdb1fb55","eventTime":"2022-01-13T20:45:49.627-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44","firstName":"fernando","lastName":"lopes","userId":"flopez","win":0,"loss":0,"draw":0}}
+{"type":"PLAYER_WON","id":"368e32c2-05ad-4219-9e43-a5ebf4420204","eventTime":"2022-01-13T21:16:01.104-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_LOST","id":"d6d8f251-ac47-4cac-b91b-ed5d22082d99","eventTime":"2022-01-13T21:16:01.112-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_TIED","id":"b2bdd316-e414-46c4-be6e-d75ef54ca118","eventTime":"2022-01-13T21:16:01.119-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_WON","id":"108e3015-69f7-4a10-bccc-6b970b460af5","eventTime":"2022-01-13T21:17:18.648-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_LOST","id":"987cf39b-8776-4fcb-82b6-7a0e95e08aac","eventTime":"2022-01-13T21:17:18.657-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_TIED","id":"84938195-9f0b-46d5-b94b-14740d791e2e","eventTime":"2022-01-13T21:17:18.666-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_WON","id":"b71ce352-8e16-45a8-8365-3a8ae324c5d7","eventTime":"2022-01-13T21:17:42.734-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_LOST","id":"cbde1b90-4124-4d8a-bba5-963d48b7f3f8","eventTime":"2022-01-13T21:17:42.746-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
+{"type":"PLAYER_TIED","id":"8202080b-5263-4790-a6be-a6170f544236","eventTime":"2022-01-13T21:17:42.756-08:00","data":{"playerId":"3de4644f-8282-458b-8ad5-c7b38865be44"}}
